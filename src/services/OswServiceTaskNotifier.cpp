@@ -79,6 +79,7 @@ void OswServiceTaskNotifier::deleteNotification(int64_t id, const std::string pu
 }
 
 void OswServiceTaskNotifier::setup() {
+    const std::lock_guard<std::mutex> lock{mutlimapMutex};
     OswServiceTask::setup();
     scheduler = OswHal::getInstance()->environment()->getNotifications();
 }
