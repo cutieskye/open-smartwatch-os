@@ -164,6 +164,7 @@ size_t OswUI::showNotification(std::string message, bool isPersistent) {
     std::lock_guard<std::mutex> guard(this->mNotificationsLock);  // Make sure to not modify the notifications vector during drawing
     auto notification = OswUI::OswUINotification{std::move(message), isPersistent};
     this->mNotifications.push_back(notification);
+    OswHal::getInstance()->vibrate(1000);
     return notification.getId();
 }
 

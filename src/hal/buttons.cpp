@@ -32,7 +32,7 @@ void OswHal::setupButtons(void) {
     }
 }
 
-#if defined(GPS_EDITION) || defined(GPS_EDITION_ROTATED)
+//#if defined(GPS_EDITION) || defined(GPS_EDITION_ROTATED)
 
 void OswHal::vibrate(long millis) {
     digitalWrite(VIBRATE, HIGH);
@@ -40,7 +40,7 @@ void OswHal::vibrate(long millis) {
     delay(millis);
     digitalWrite(VIBRATE, LOW);
 }
-#endif
+//#endif
 
 void OswHal::checkButtons(void) {
     // Buttons (Engine)

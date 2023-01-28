@@ -70,10 +70,7 @@ class OswHal {
     void suppressButtonUntilUp(Button btn);
     unsigned long btnIsDownSince(Button btn);
     void clearButtonState(Button btn);
-#if defined(GPS_EDITION) || defined(GPS_EDITION_ROTATED)
-
     void vibrate(long millis);
-#endif
 
     // Display
     void setBrightness(uint8_t b, bool storeToNVS = true);

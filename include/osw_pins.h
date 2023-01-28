@@ -47,6 +47,7 @@
 #define BTN_1 0
 #define BTN_2 10
 #define BTN_3 13
+#define VIBRATE 14
 #endif
 
 // assign active LOW or HIGH states according to hardware
