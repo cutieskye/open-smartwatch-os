@@ -17,10 +17,7 @@ void OswHal::setupButtons(void) {
     pinMode(BTN_1, INPUT);
     pinMode(BTN_2, INPUT);
     pinMode(BTN_3, INPUT);
-#if defined(GPS_EDITION) || defined(GPS_EDITION_ROTATED)
-
     pinMode(VIBRATE, OUTPUT);
-#endif
 
     // Buttons (Engine)
     for (uint8_t i = 0; i < 3; i++) {
